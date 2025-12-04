@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MauBuatDrawer">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:title="@null"
+            android:id="@+id/toolbar"
+            android:background="@color/bg"
+            android:elevation="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/switchMode"
+                    android:text="Mode Terang"
+                    android:fontFamily="@font/poppins_light"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="16dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/bg"
+            android:id="@+id/fragment_container">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:background="@color/bg"
+                android:layout_height="match_parent"
+                tools:context=".WarungActivity">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ManganSek"
+                            android:fontFamily="@font/poppins_light"
+                            app:layout_constraintTop_toTopOf="parent"
+                            android:textAlignment="center"
+                            android:id="@+id/tvManganSek"
+                            android:textSize="35sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text"
+                            android:layout_marginTop="50dp"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/etPemesan"
+                            android:layout_height="wrap_content"
+                            style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
+                            android:hint="Nama Pemesan"
+                            android:layout_margin="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:boxStrokeColor="@color/text"
+                            android:textColorHint="@color/text"
+                            app:endIconMode="clear_text"
+                            app:counterMaxLength="20"
+                            app:counterEnabled="true"
+                            app:layout_constraintTop_toBottomOf="@+id/tvManganSek">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins_light"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvMakanan"
+                            android:text="Makanan"
+                            android:textStyle="bold"
+                            android:layout_marginTop="32dp"
+                            android:fontFamily="@font/poppins_light"
+                            android:textColor="@color/text"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintTop_toBottomOf="@+id/etPemesan"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lihat Lainnya"
+                            android:fontFamily="@font/poppins_light"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="39dp"
+                            android:textSize="15sp"
+                            android:textColor="#929191"
+                            app:layout_constraintTop_toBottomOf="@+id/etPemesan"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="280dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cvMakanan2"
+                            android:id="@+id/cvMakanan1"
+                            app:layout_constraintTop_toBottomOf="@+id/tvMakanan">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:id="@+id/imgNasiGorengPedas"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/img_5"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNasiGorengPedas"
+                                    android:text="Nasi Goreng Ble.."
+                                    android:fontFamily="@font/poppins_light"
+                                    app:layout_constraintTop_toBottomOf="@+id/imgNasiGorengPedas"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@id/imgNasiGorengPedas"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/text"
+                                    android:textSize="17sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvHargaMakanan1"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:text="15.000"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvNasiGorengPedas"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#929191"
+                                    android:textSize="15sp"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMakanan1"
+                                    android:background="@drawable/img_21"
+                                    android:id="@+id/tombolMinusMakanan1"
+                                    android:layout_marginStart="15dp"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/tombolPlusMakanan1"
+                                    android:layout_marginEnd="15dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMakanan1"
+                                    android:background="@drawable/img_22"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <EditText
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:hint="0"
+                                    android:id="@+id/jumlahNasiPedas"
+                                    android:textAlignment="center"
+                                    android:textColorHint="@color/text"
+                                    android:background="@drawable/bingkaicardviewhijau"
+                                    app:layout_constraintEnd_toStartOf="@id/tombolPlusMakanan1"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMakanan1"
+                                    app:layout_constraintStart_toEndOf="@id/tombolMinusMakanan1"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="280dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintStart_toEndOf="@id/cvMakanan1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:id="@+id/cvMakanan2"
+                            app:layout_constraintTop_toBottomOf="@+id/tvMakanan">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:id="@+id/imgNasiCampur"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/img_6"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvNasiCampur"
+                                    android:text="Nasi Campur"
+                                    android:fontFamily="@font/poppins_light"
+                                    app:layout_constraintTop_toBottomOf="@+id/imgNasiCampur"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    app:layout_constraintEnd_toEndOf="@id/imgNasiCampur"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/text"
+                                    android:textSize="17sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvHargaMakanan2"
+                                    android:text="23.000"
+                                    android:fontFamily="@font/poppins_light"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvNasiCampur"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#929191"
+                                    android:textSize="15sp"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMakanan2"
+                                    android:background="@drawable/img_21"
+                                    android:id="@+id/tombolMinusMakanan2"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    android:layout_marginStart="15dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/tombolPlusMakanan2"
+                                    android:layout_marginEnd="15dp"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMakanan2"
+                                    android:background="@drawable/img_22"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <EditText
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:hint="0"
+                                    android:id="@+id/jumlahNasiCampur"
+                                    android:textAlignment="center"
+                                    android:textColorHint="@color/text"
+                                    android:background="@drawable/bingkaicardviewhijau"
+                                    app:layout_constraintEnd_toStartOf="@id/tombolPlusMakanan2"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMakanan2"
+                                    app:layout_constraintStart_toEndOf="@id/tombolMinusMakanan2"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <!--     -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvMinuman"
+                            android:text="Minuman"
+                            android:textStyle="bold"
+                            android:layout_marginTop="32dp"
+                            android:textColor="@color/text"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            android:layout_marginLeft="20dp"
+                            app:layout_constraintTop_toBottomOf="@+id/cvMakanan1"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lihat Lainnya"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="39dp"
+                            android:textSize="15sp"
+                            android:textColor="#929191"
+                            app:layout_constraintTop_toBottomOf="@+id/cvMakanan2"/>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="280dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/cvMinuman2"
+                            android:id="@+id/cvMinuman1"
+                            app:layout_constraintTop_toBottomOf="@+id/tvMinuman">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:id="@+id/imgEsTeh"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/img_7"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvEsTeh"
+                                    android:text="Es Teh"
+                                    android:fontFamily="@font/poppins_light"
+                                    app:layout_constraintTop_toBottomOf="@+id/imgEsTeh"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    app:layout_constraintEnd_toEndOf="@id/imgEsTeh"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/text"
+                                    android:textSize="17sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvHargaMinuman1"
+                                    android:text="4.000"
+                                    android:fontFamily="@font/poppins_light"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvEsTeh"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="#929191"
+                                    android:textSize="15sp"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMinuman1"
+                                    android:background="@drawable/img_21"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    android:id="@+id/tombolMinusMinuman1"
+                                    android:layout_marginStart="15dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/tombolPlusMinuman1"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    android:layout_marginEnd="15dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMinuman1"
+                                    android:background="@drawable/img_22"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <EditText
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:hint="0"
+                                    android:id="@+id/jumlahEsTeh"
+                                    android:textAlignment="center"
+                                    android:textColorHint="@color/text"
+                                    android:background="@drawable/bingkaicardviewhijau"
+                                    app:layout_constraintEnd_toStartOf="@id/tombolPlusMinuman1"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMinuman1"
+                                    app:layout_constraintStart_toEndOf="@id/tombolMinusMinuman1"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="280dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="20dp"
+                            app:cardCornerRadius="20dp"
+                            app:layout_constraintStart_toEndOf="@id/cvMinuman1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:id="@+id/cvMinuman2"
+                            app:layout_constraintTop_toBottomOf="@+id/tvMinuman">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="150dp"
+                                    android:id="@+id/imgEsBuah"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginStart="10dp"
+                                    app:cardCornerRadius="20dp"
+                                    android:layout_marginEnd="10dp"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent">
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/img_8"/>
+
+                                </androidx.cardview.widget.CardView>
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvEsBuah"
+                                    app:layout_constraintEnd_toEndOf="@id/imgEsBuah"
+                                    android:text="Es Buah"
+                                    android:fontFamily="@font/poppins_light"
+                                    app:layout_constraintTop_toBottomOf="@id/imgEsBuah"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@color/text"
+                                    android:textSize="17sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/tvHargaMinuman2"
+                                    android:text="10.000"
+                                    app:layout_constraintTop_toBottomOf="@+id/tvEsBuah"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/poppins_light"
+                                    android:textColor="#929191"
+                                    android:textSize="15sp"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMinuman2"
+                                    android:background="@drawable/img_21"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    android:id="@+id/tombolMinusMinuman2"
+                                    android:layout_marginStart="15dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <ImageButton
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/tombolPlusMinuman2"
+                                    android:backgroundTint="@color/logoBeranda"
+                                    android:layout_marginEnd="15dp"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMinuman2"
+                                    android:background="@drawable/img_22"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                                <EditText
+                                    android:layout_width="60dp"
+                                    android:layout_height="30dp"
+                                    android:hint="0"
+                                    android:id="@+id/jumlahEsBuah"
+                                    android:textAlignment="center"
+                                    android:textColorHint="@color/text"
+                                    android:background="@drawable/bingkaicardviewhijau"
+                                    app:layout_constraintEnd_toStartOf="@id/tombolPlusMinuman2"
+                                    app:layout_constraintTop_toBottomOf="@id/tvHargaMinuman2"
+                                    app:layout_constraintStart_toEndOf="@id/tombolMinusMinuman2"
+                                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:background="@drawable/bgputihbuatbawah"
+                            android:backgroundTint="@color/bg"
+                            tools:ignore="MissingConstraints"
+                            app:layout_constraintTop_toBottomOf="@id/cvMinuman1"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </ScrollView>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/bgputihbuatbawah"
+                    android:backgroundTint="@color/bg"
+                    tools:ignore="MissingConstraints"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:text="Hitung"
+                    android:backgroundTint="#8D1E28"
+                    android:id="@+id/btnHitung"
+                    android:fontFamily="@font/poppins_light"
+                    app:cornerRadius="20dp"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_margin="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="#8D1E28"
+        android:background="@color/bg"
+        app:itemTextColor="@color/text"
+        app:menu="@menu/nav_menu"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>

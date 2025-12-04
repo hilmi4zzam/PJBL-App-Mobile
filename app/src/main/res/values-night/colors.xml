@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#3F3D3D</color>
+    <color name="text">#FFFFFF</color>
+    <color name="numberKal">#FFFFFF</color>
+    <color name="koversi">#3F3D3D</color>
+    <color name="strokeEtKal">#9d9f94</color>
+    <color name="logoBeranda">#9F9F9F</color>
+</resources>

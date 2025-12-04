@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">hlmzProject.</string>
+
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Kristen</item>
+        <item>Katolik</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>Konghucu</item>
+    </string-array>
+
+    <string-array name="suhu">
+        <item>Celcius</item>
+        <item>Farenhait</item>
+        <item>Kelvin</item>
+    </string-array>
+
+    <string name="title_activity_navigasi_drawer">NavigasiDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
