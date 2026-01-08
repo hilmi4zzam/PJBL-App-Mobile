@@ -58,10 +58,10 @@ class MauBuatDrawer : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         switchMode.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-                switchMode.text = "Mode Gelap"
+                switchMode.text = getString(R.string.dark_mode)
             } else {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-                switchMode.text = "Mode Terang"
+                switchMode.text = getString(R.string.light_mode)
             }
         }
     }

@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/switchMode"
                     android:fontFamily="@font/poppins_light"
-                    android:text="Mode Terang"
+                    android:text="@string/light_mode"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -56,12 +56,12 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:background="@color/bg"
-                    android:layout_height="match_parent">
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="IsiAja"
+                        android:text="IsiWae"
                         android:fontFamily="@font/poppins_light"
                         app:layout_constraintTop_toTopOf="parent"
                         android:textAlignment="center"
@@ -76,7 +76,7 @@
                         android:id="@+id/etNamaLengkap"
                         android:layout_height="wrap_content"
                         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-                        android:hint="Nama Lengkap"
+                        android:hint="@string/full_name"
                         android:layout_margin="20dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +98,7 @@
                         android:id="@+id/etAlamatLengkap"
                         android:layout_height="wrap_content"
                         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-                        android:hint="Alamat Lengkap"
+                        android:hint="@string/address"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,7 @@
                         android:id="@+id/etNoHP"
                         android:layout_height="wrap_content"
                         style="@style/ThemeOverlay.Material3.AutoCompleteTextView.OutlinedBox"
-                        android:hint="Nomor Telepon"
+                        android:hint="@string/phone"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         android:layout_marginBottom="20dp"
@@ -145,7 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvAgama"
-                        android:text="Agama"
+                        android:text="@string/religion"
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/poppins_light"
@@ -169,7 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvJenisKelamin"
-                        android:text="Jenis Kelamin"
+                        android:text="@string/gender"
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/poppins_light"
@@ -200,7 +200,7 @@
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toStartOf="@id/perempuan"
                                 android:layout_height="wrap_content"
-                                android:text="Laki Laki"
+                                android:text="@string/male"
                                 tools:ignore="MissingConstraints" />
 
                             <RadioButton
@@ -214,7 +214,7 @@
                                 android:layout_height="wrap_content"
                                 android:background="@drawable/custom_radio_selector"
                                 android:button="@color/transparent"
-                                android:text="Perempuan"
+                                android:text="@string/female"
                                 tools:ignore="MissingConstraints" />
 
                     </RadioGroup>
@@ -223,7 +223,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/tvKegemaran"
-                        android:text="Kegemaran"
+                        android:text="@string/hobby"
                         android:textStyle="bold"
                         android:layout_marginTop="20dp"
                         android:fontFamily="@font/poppins_light"
@@ -236,7 +236,7 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Membaca"
+                        android:text="@string/reading"
                         android:id="@+id/cbMembaca"
                         android:layout_marginTop="10dp"
                         android:fontFamily="@font/poppins_light"
@@ -247,7 +247,7 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Menulis"
+                        android:text="@string/writing"
                         android:id="@+id/cbMenulis"
                         android:fontFamily="@font/poppins_light"
                         app:layout_constraintTop_toBottomOf="@id/cbMembaca"
@@ -257,7 +257,7 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Belajar"
+                        android:text="@string/studying"
                         android:id="@+id/cbBelajar"
                         android:fontFamily="@font/poppins_light"
                         app:layout_constraintTop_toBottomOf="@id/cbMenulis"
@@ -267,7 +267,7 @@
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Olahraga"
+                        android:text="@string/sports"
                         android:id="@+id/cbOlahraga"
                         android:fontFamily="@font/poppins_light"
                         app:layout_constraintTop_toBottomOf="@id/cbBelajar"
@@ -277,7 +277,7 @@
                     <Button
                         android:layout_width="170dp"
                         android:layout_height="60dp"
-                        android:text="Kirim"
+                        android:text="@string/send"
                         android:textColor="@color/bg"
                         android:layout_marginTop="50dp"
                         android:id="@+id/btnKirim"

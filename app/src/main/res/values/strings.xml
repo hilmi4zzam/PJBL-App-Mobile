@@ -24,4 +24,74 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="nav_formulir">Formulir</string>
+    <string name="nav_kalkulator">Kalkulator</string>
+    <string name="nav_warung">Warung</string>
+    <string name="nav_konversi">Konversi</string>
+    <string name="nav_profil">Profil</string>
+
+    <string name="main_title">hlmzProject.</string>
+    <string name="our_profile">Profil Kami</string>
+    <string name="my_name">Mohamad Hilmi Azzam</string>
+    <string name="light_mode">Mode Terang</string>
+    <string name="dark_mode">Mode Gelap</string>
+
+    <string name="warung_title">ManganSek</string>
+    <string name="customer_name">Nama Pemesan</string>
+    <string name="food">Makanan</string>
+    <string name="see_more">Lihat Lainnya</string>
+    <string name="drink">Minuman</string>
+    <string name="spicy_fried_rice">Nasi Goreng Ble..</string>
+    <string name="mixed_rice">Nasi Campur</string>
+    <string name="ice_tea">Es Teh</string>
+    <string name="fruit_ice">Es Buah</string>
+    <string name="calculate">Hitung</string>
+    <string name="zero">0</string>
+
+    <string name="profile_name">Hilmi Azzam</string>
+    <string name="profile_profession">Software Engineering</string>
+    <string name="my_biography">Biografi Saya</string>
+    <string name="specialist">Spesialis</string>
+    <string name="fullstack">Front End, Back End</string>
+    <string name="idol">Idola</string>
+    <string name="idols">Sandhika Galih, Dea Afrizal, webDev</string>
+    <string name="experience">Pengalaman</string>
+    <string name="learning">Sedang Belajar</string>
+    <string name="technology">Teknologi</string>
+    <string name="social_media">Sosial Media</string>
+    <string name="phone_number">+62 882 1409 0684</string>
+    <string name="instagram">hilmi4zzam</string>
+    <string name="github">mohamadhilmi716-gif</string>
+    <string name="email">hilmiazzam26@gmail.com</string>
+
+    <string name="form_title">IsiAja</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="address">Alamat Lengkap</string>
+    <string name="phone">Nomor Telepon</string>
+    <string name="religion">Agama</string>
+    <string name="gender">Jenis Kelamin</string>
+    <string name="male">Laki Laki</string>
+    <string name="female">Perempuan</string>
+    <string name="hobby">Kegemaran</string>
+    <string name="reading">Membaca</string>
+    <string name="writing">Menulis</string>
+    <string name="studying">Belajar</string>
+    <string name="sports">Olahraga</string>
+    <string name="send">Kirim</string>
+
+    <string name="thank_you">TerimakasihMuach</string>
+    <string name="order_name">Nama :</string>
+    <string name="order_details">Detail Pesanan :</string>
+    <string name="total_payment">Total Bayar :</string>
+
+    <string name="form_result_title">IniJawabNya</string>
+    <string name="result_name">Nama :</string>
+    <string name="result_address">Alamat :</string>
+    <string name="result_phone">Nomor Telepon :</string>
+    <string name="result_religion">Agama :</string>
+    <string name="result_gender">Jenis Kelamin :</string>
+    <string name="result_hobby">Kegemaran :</string>
+
+    <string name="conversion_title">Konversi Suhu</string>
+    <string name="convert">Konversi</string>
 </resources>

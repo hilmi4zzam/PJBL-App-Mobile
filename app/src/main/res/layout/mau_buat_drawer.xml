@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MauBuatDrawer">
+    android:id="@+id/drawer_layout"
+    android:background="@color/bg"
+    tools:context=".MauBuatDrawer"
+    tools:openDrawer="start">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/switchMode"
                     android:fontFamily="@font/poppins_light"
-                    android:text="Mode Terang"
+                    android:text="@string/light_mode"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +85,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_light"
-                            android:text="hlmzProject."
+                            android:text="@string/main_title"
                             android:textAlignment="center"
                             android:textColor="@color/text"
                             android:textSize="40sp"
@@ -127,7 +127,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="48dp"
                                     android:fontFamily="@font/poppins_light"
-                                    android:text="Formulir"
+                                    android:text="@string/nav_formulir"
                                     android:textColor="@color/text"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -171,7 +171,7 @@
                                     android:layout_marginTop="48dp"
                                     android:fontFamily="@font/poppins_light"
                                     android:textColor="@color/text"
-                                    android:text="Kalkulator"
+                                    android:text="@string/nav_kalkulator"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
@@ -214,7 +214,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="48dp"
                                     android:fontFamily="@font/poppins_light"
-                                    android:text="Warung"
+                                    android:text="@string/nav_warung"
                                     android:textColor="@color/text"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -258,7 +258,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="48dp"
                                     android:fontFamily="@font/poppins_light"
-                                    android:text="Konversi"
+                                    android:text="@string/nav_konversi"
                                     android:textColor="@color/text"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
@@ -296,7 +296,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/poppins_extralight"
-                                    android:text="Profil Kami"
+                                    android:text="@string/our_profile"
                                     android:textColor="@color/text"
                                     android:id="@+id/tvProfilKami"
                                     android:layout_marginEnd="20dp"
@@ -313,11 +313,12 @@
                                     android:layout_marginTop="15dp"
                                     android:fontFamily="@font/poppins_light"
                                     android:id="@+id/mohamadHilmiAzzam"
-                                    android:text="Mohamad Hilmi Azzam"
+                                    android:text="@string/my_name"
                                     app:layout_constraintEnd_toEndOf="@id/tvProfilKami"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintTop_toTopOf="@id/tvProfilKami"
                                     app:layout_constraintStart_toStartOf="@id/tvProfilKami" />
+
 
                                 <ImageView
                                     android:layout_width="match_parent"
@@ -348,5 +349,6 @@
         android:background="@color/bg"
         app:itemTextColor="@color/text"
         app:menu="@menu/nav_menu"/>
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
